@@ -13,9 +13,17 @@
     "build": "cross-env NODE_ENV=production webpack",
     "postversion": "git push && git push --tags && npm publish"
   },
-  "dependencies": {
-    "plist": "^2.1.0"
+  "engines": {
+    "cordovaDependencies": {
+      "5.0.0": {
+        "cordova-android": ">=6.3.0"
+      },
+      "7.0.0": {
+        "cordova": ">100"
+      }
+    }
   },
+  "bundleDependencies": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mircoc/cordova-plugin-settings-hook.git"
@@ -33,6 +41,8 @@
   "homepage": "https://github.com/mircoc/cordova-plugin-settings-hook",
   "devDependencies": {
     "cross-env": "^5.0.1",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "elementtree": "^0.1.7",
+    "plist": "^2.1.0"
   }
 }

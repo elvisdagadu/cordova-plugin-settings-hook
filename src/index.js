@@ -69,10 +69,9 @@ var fs = require("fs"),
 
 module.exports = function(context) {
 
-    var cordova_util = context.requireCordovaModule("../cordova/util"),
-        platforms = context.requireCordovaModule("../platforms/platforms"),
+    var cordova_util = context.requireCordovaModule('cordova-lib/src/cordova/util'),
         rootdir = cordova_util.isCordova(),
-        et = context.requireCordovaModule('elementtree'),
+        et = require('elementtree'),
         plist = require('plist');
 
     var platformConfig = (function(){
